@@ -54,19 +54,29 @@ ds-5110-crime-dynamics-chicago/
 
 ## What We Did
 
-### 1. **Trends Over Time**
-- Explored how crime types change by time of day, month, and year
-- Analyzed arrest rates and domestic vs. non-domestic incidents
 
-### 2. **Forecasting Daily Crime**
-- Cleaned the data to remove outliers and prepare it for modeling
-- Used **SARIMAX** (a statistical time series model) to forecast daily crime
-- Built a more flexible **XGBoost** model to capture short-term fluctuations
+### Trends & Patterns Over Time
+- Analyzed **daily, monthly, and yearly crime trends** from 2019 to early 2025  
+- Visualized crime distribution by **hour of day**, **day of week**, and **season**  
+- Studied **arrest patterns** across years and **arrest rate** per crime type  
+- Compared **domestic vs. non-domestic** crime trends over time  
 
-### 3. **Clustering Crime Hotspots**
-- Applied **DBSCAN**, a spatial clustering algorithm, to find crime hotspots in Chicago
-- Assigned the most common crime type to each cluster
-- Created an interactive **Folium map** to visualize where and what types of crimes occur
+### Forecasting
+- Forecasted **daily crime counts for 2025** using:  
+  - **SARIMAX** model for capturing seasonality and trends  
+  - **XGBoost** with lag, rolling stats, and calendar features  
+- Evaluated model performance using **RMSE** and plotted prediction vs. actual  
+
+### Spatial Clustering
+- Performed **DBSCAN clustering** on geolocation data (lat/lon) from 50,000 crimes  
+- Tuned `eps` and `min_samples` to form ~500 meaningful clusters  
+- Identified **hotspots** with their **dominant crime types**  
+- Visualized hotspots using an **interactive Folium map** (saved as HTML)  
+
+### Feature Insights
+- Generated **correlation heatmaps** for crime features  
+- Compared **crime density by hour** for domestic and non-domestic crimes  
+- Used statistical tests (ADF) to check stationarity in time series  
 
 ---
 
