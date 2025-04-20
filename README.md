@@ -43,7 +43,7 @@ ds-5110-crime-dynamics-chicago/
 │   ├── analysis/
 │   │   └── (all EDA/plots images)
 │   ├── forecasting/
-│   │   └── (SARIMAX & XGBoost plots, predictions, etc.)
+│   │   └── (SARIMAX & XGBoost plots)
 │   └── clustering/
 │       └── crime_hotspots_dbscan.html
 │
